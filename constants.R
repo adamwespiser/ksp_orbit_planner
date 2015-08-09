@@ -15,6 +15,12 @@ readInParams <- function(param_file=constants_file){
 		return df
 }
 
+
+#helper function-> Current Planet SOI -> planet data
+#define orbits from a,v,sigma
+
+
+
 Kerbin_GM = 3.5316000*(10^12) #m^3/s^2
 Kerbin_SOI_radius = 84159286 #meters
 Kerbin_atm_scale_height = 5600 # meters
