@@ -1,0 +1,549 @@
+
+==================== FINAL INTERFACE ====================
+2016-01-07 06:36:21.018807 UTC
+
+interface kspor_J64ctaILoGXG84u49vC4Sn:Lib 7103
+  interface hash: 3f1a08063631ce47b7d0250b43578465
+  ABI hash: 4e708a2281691f72bee6e8a36e150ea8
+  export-list hash: 5fff09c21795217d75bdee4391de8dc3
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1b5fab261b04106207f8474a3d544d60
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Lib.addMeasure
+  Lib.angVelocityFromPeriod
+  Lib.aveAngVelocity
+  Lib.aveOrbitalVelocity
+  Lib.cubeMeter
+  Lib.f2Measure
+  Lib.f3Measure
+  Lib.fromMeter2
+  Lib.hoffTransDeltaV
+  Lib.liftMeasure
+  Lib.orbitalPeriod
+  Lib.orbitalVelocityCirc
+  Lib.periodFromAngVelocity
+  Lib.periodFromSemiMajorAxis
+  Lib.someFunc
+  Lib.sqaureMeter
+  Lib.toAngVelocity
+  Lib.toDeltaV
+  Lib.toGraveConst
+  Lib.toMeter
+  Lib.toMeter2
+  Lib.toMeter3
+  Lib.toSeconds
+  Lib.toVelocity
+  Lib.velocityFromSemiAxis
+  Lib.AngVelocity
+  Lib.DeltaV
+  Lib.GravConst
+  Lib.Hour
+  Lib.Joules
+  Lib.Measure{Lib.Measure}
+  Lib.Meter
+  Lib.Meter2
+  Lib.Meter3
+  Lib.Minute
+  Lib.Second
+  Lib.Second2
+  Lib.Velocity
+module dependencies:
+package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.Float e532d434ec2447d809887c0fca1d78a5
+import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.2.0:GHC.Real 1281efa9baf803bc7859d7efb89a38b3
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:System.IO 0248c1e850b7ea124cf7a2e1669ebf67
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+33823b6f555df49037aaf359fd323b80
+  $fShowMeasure :: GHC.Show.Show (Lib.Measure a)
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a.
+                  @ (Lib.Measure a)
+                  (Lib.$fShowMeasure_$cshowsPrec @ a)
+                  (Lib.$fShowMeasure_$cshow @ a)
+                  (Lib.$fShowMeasure_$cshowList @ a) -}
+33823b6f555df49037aaf359fd323b80
+  $fShowMeasure1 :: Lib.Measure a -> GHC.Show.ShowS
+  {- Arity: 1,
+     Unfolding: (\ @ a w :: Lib.Measure a ->
+                 case w of ww { Lib.Measure ww1 -> Lib.$w$cshowsPrec @ a 0 ww1 }) -}
+3e01c6b10d315479663bdc4d0d583619
+  $fShowMeasure2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Measure "#) -}
+e3e03f52a12db721e3ea887dfc4bb03f
+  $fShowMeasure3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11) -}
+33823b6f555df49037aaf359fd323b80
+  $fShowMeasure_$cshow :: Lib.Measure a -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U(U))>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a w :: Lib.Measure a ->
+                 case w of ww { Lib.Measure ww1 -> Lib.$w$cshow @ a ww1 }) -}
+33823b6f555df49037aaf359fd323b80
+  $fShowMeasure_$cshowList :: [Lib.Measure a] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ @ a ->
+                 GHC.Show.showList__ @ (Lib.Measure a) (Lib.$fShowMeasure1 @ a)) -}
+33823b6f555df49037aaf359fd323b80
+  $fShowMeasure_$cshowsPrec ::
+    GHC.Types.Int -> Lib.Measure a -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U(U)><S,1*U(1*U(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a w :: GHC.Types.Int w1 :: Lib.Measure a ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Lib.Measure ww3 ->
+                 Lib.$w$cshowsPrec @ a ww1 ww3 } }) -}
+e350e9f0e3a967cb3e58515ad41947e0
+  $w$cshow :: GHC.Types.Double -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U(U)>, Inline: [0],
+     Unfolding: (\ @ a ww :: GHC.Types.Double ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   Lib.$fShowMeasure2
+                   (case ww of ww1 { GHC.Types.D# ww2 ->
+                    GHC.Float.$w$sshowSignedFloat
+                      GHC.Float.$fShowDouble_$sshowFloat
+                      Lib.$fShowMeasure3
+                      ww2
+                      (GHC.Types.[] @ GHC.Types.Char) })) -}
+e39b2eb4c2dc5f71a8dec019849e39d1
+  $w$cshowsPrec ::
+    GHC.Prim.Int# -> GHC.Types.Double -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <L,U><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ @ a ww :: GHC.Prim.Int# ww1 :: GHC.Types.Double ->
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = case ww1 of ww2 { GHC.Types.D# ww3 ->
+                     GHC.Float.$w$sshowSignedFloat
+                       GHC.Float.$fShowDouble_$sshowFloat
+                       Lib.$fShowMeasure3
+                       ww3 }
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11) of wild {
+                   GHC.Types.False
+                   -> \ x :: GHC.Base.String ->
+                      GHC.Base.++ @ GHC.Types.Char Lib.$fShowMeasure2 (g x)
+                   GHC.Types.True
+                   -> \ x :: GHC.Base.String ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Lib.$fShowMeasure2
+                           (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 x))) }) -}
+475943b9a360aa810ad0717f89b7eb7c
+  data AngVelocity
+    Promotable
+b528c3e3661d3c4d4a31e54d2ca58148
+  data DeltaV
+    Promotable
+d6b894f0f98131de3e3a5b6eccd9fe1d
+  data GravConst
+    Promotable
+d05dbee771eed4ebbab0265a1474d558
+  data Hour
+    Promotable
+0d75be7ec583ed74c0c1a1e40204cf73
+  data Joules
+    Promotable
+33823b6f555df49037aaf359fd323b80
+  type role Measure phantom
+  data Measure a = Measure GHC.Types.Double
+6ca7422f749077782fbb7018e33b9bb7
+  data Meter
+    Promotable
+10289d80cb0113062f43766e9d5d234c
+  data Meter2
+    Promotable
+fef1117dd45e82997dfe1d103050ab2a
+  data Meter3
+    Promotable
+8ffdfa4ac633f1523b77bdc13d414e5b
+  data Minute
+    Promotable
+03d0ec634ce2528f9b6020e7d184c9eb
+  data Second
+    Promotable
+0ba166b5f85139f28d965677fe441990
+  data Second2
+    Promotable
+61665a8d3352f27dd32aa761a54ff020
+  data Velocity
+    Promotable
+6d5139fcf8d6c4147bf70bdacd70dfe7
+  addMeasure :: Lib.Measure a -> Lib.Measure a -> Lib.Measure a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U(1*U(U))><S,1*U(1*U(U))>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ds :: Lib.Measure a ds1 :: Lib.Measure a ->
+                 case ds of wild { Lib.Measure x1 ->
+                 case ds1 of wild1 { Lib.Measure y1 ->
+                 Lib.Measure @ a (GHC.Float.plusDouble x1 y1) } }) -}
+d7329f8c83e9997430f442f6ac25420e
+  angVelocityFromPeriod ::
+    Lib.Measure Lib.Second -> Lib.Measure Lib.AngVelocity
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Lib.Measure Lib.Second ->
+                 case ds of wild { Lib.Measure s1 ->
+                 Lib.Measure
+                   @ Lib.AngVelocity
+                   (case s1 of wild1 { GHC.Types.D# y ->
+                    case GHC.Prim./## 6.283185307179586 y of wild2 { DEFAULT ->
+                    GHC.Types.D# wild2 } }) }) -}
+2c1ec5904fdf8a5481f2d64cf4effb0c
+  aveAngVelocity ::
+    Lib.Measure Lib.GravConst
+    -> Lib.Measure Lib.Meter -> Lib.Measure Lib.AngVelocity
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U(1*U(U))><S,1*U(1*U(U))>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Lib.Measure Lib.GravConst ds1 :: Lib.Measure Lib.Meter ->
+                 case ds of wild { Lib.Measure g1 ->
+                 case ds1 of wild1 { Lib.Measure m1 ->
+                 Lib.Measure
+                   @ Lib.AngVelocity
+                   (case m1 of wild2 { GHC.Types.D# x ->
+                    case g1 of wild3 { GHC.Types.D# y ->
+                    case GHC.Prim./##
+                           (GHC.Prim.*## (GHC.Prim.*## x x) x)
+                           y of wild4 { DEFAULT ->
+                    GHC.Types.D# (GHC.Prim.sqrtDouble# wild4) } } }) } }) -}
+b588f16a9372e93eb887ae728831065b
+  aveOrbitalVelocity ::
+    Lib.Measure Lib.GravConst
+    -> Lib.Measure Lib.Meter -> Lib.Measure Lib.Velocity
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U(1*U(U))><S,1*U(1*U(U))>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Lib.Measure Lib.GravConst ds1 :: Lib.Measure Lib.Meter ->
+                 case ds of wild { Lib.Measure g1 ->
+                 case ds1 of wild1 { Lib.Measure m1 ->
+                 Lib.Measure
+                   @ Lib.Velocity
+                   (case m1 of wild2 { GHC.Types.D# y ->
+                    case g1 of wild3 { GHC.Types.D# x ->
+                    case GHC.Prim./##
+                           (GHC.Prim.*##
+                              39.47841760435743
+                              (GHC.Prim.*## (GHC.Prim.*## x x) x))
+                           x of wild4 { DEFAULT ->
+                    case GHC.Prim./##
+                           (GHC.Prim.*## 6.283185307179586 y)
+                           (GHC.Prim.sqrtDouble# wild4) of wild5 { DEFAULT ->
+                    GHC.Types.D# wild5 } } } }) } }) -}
+399baea00564154eff94c94399b9f5f6
+  cubeMeter ::
+    Lib.Measure Lib.Meter
+    -> Lib.Measure Lib.Meter
+    -> Lib.Measure Lib.Meter
+    -> Lib.Measure Lib.Meter3
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S,1*U(1*U(U))><S,1*U(1*U(U))><S,1*U(1*U(U))>m,
+     Unfolding: InlineRule (3, True, False)
+                (\ ds :: Lib.Measure Lib.Meter
+                   ds1 :: Lib.Measure Lib.Meter
+                   ds2 :: Lib.Measure Lib.Meter ->
+                 case ds of wild { Lib.Measure m1 ->
+                 case ds1 of wild1 { Lib.Measure m2 ->
+                 case ds2 of wild2 { Lib.Measure m3 ->
+                 Lib.Measure
+                   @ Lib.Meter3
+                   (case m1 of wild3 { GHC.Types.D# x ->
+                    case m2 of wild4 { GHC.Types.D# y ->
+                    case m3 of wild5 { GHC.Types.D# y1 ->
+                    GHC.Types.D# (GHC.Prim.*## (GHC.Prim.*## x y) y1) } } }) } } }) -}
+cc7ae12ac8ec2827276a7029b8c86130
+  f2Measure ::
+    (GHC.Types.Double -> GHC.Types.Double -> GHC.Types.Double)
+    -> Lib.Measure a -> Lib.Measure a -> Lib.Measure a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*C1(C1(U))><S,1*U(U)><S,1*U(U)>m,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   f :: GHC.Types.Double -> GHC.Types.Double -> GHC.Types.Double
+                   ds :: Lib.Measure a
+                   ds1 :: Lib.Measure a ->
+                 case ds of wild { Lib.Measure x1 ->
+                 case ds1 of wild1 { Lib.Measure x2 ->
+                 Lib.Measure @ a (f x1 x2) } }) -}
+b06c54b3191bb7f602bb2065b68233dc
+  f3Measure ::
+    (GHC.Types.Double
+     -> GHC.Types.Double -> GHC.Types.Double -> GHC.Types.Double)
+    -> Lib.Measure a -> Lib.Measure a -> Lib.Measure a -> Lib.Measure a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,1*C1(C1(C1(U)))><S,1*U(U)><S,1*U(U)><S,1*U(U)>m,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   f :: GHC.Types.Double
+                        -> GHC.Types.Double -> GHC.Types.Double -> GHC.Types.Double
+                   ds :: Lib.Measure a
+                   ds1 :: Lib.Measure a
+                   ds2 :: Lib.Measure a ->
+                 case ds of wild { Lib.Measure x1 ->
+                 case ds1 of wild1 { Lib.Measure x2 ->
+                 case ds2 of wild2 { Lib.Measure x3 ->
+                 Lib.Measure @ a (f x1 x2 x3) } } }) -}
+b22856f94af174468e36fea905f075e7
+  fromMeter1 :: Lib.Measure Lib.Meter
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Lib.Measure @ Lib.Meter Lib.fromMeter3) -}
+df3928774ccf6bdfac05644a09ad4ec7
+  fromMeter2 ::
+    Lib.Measure Lib.Meter2
+    -> (Lib.Measure Lib.Meter, Lib.Measure Lib.Meter)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Lib.Measure Lib.Meter2 ->
+                 case ds of wild { Lib.Measure m1 ->
+                 (Lib.Measure @ Lib.Meter m1, Lib.fromMeter1) }) -}
+19cb1649e60ff7fb57a9dcd1261b43f1
+  fromMeter3 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 1.0) -}
+b44df5127a68ff1a66a9492a5de61239
+  hoffTransDeltaV ::
+    Lib.Measure Lib.GravConst
+    -> Lib.Measure Lib.Meter
+    -> Lib.Measure Lib.Meter
+    -> Lib.Measure Lib.DeltaV
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S,1*U(1*U(U))><S,1*U(1*U(U))><S,1*U(1*U(U))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ w :: Lib.Measure Lib.GravConst
+                   w1 :: Lib.Measure Lib.Meter
+                   w2 :: Lib.Measure Lib.Meter ->
+                 case w of ww { Lib.Measure ww1 ->
+                 case w1 of ww2 { Lib.Measure ww3 ->
+                 case w2 of ww4 { Lib.Measure ww5 ->
+                 Lib.Measure
+                   @ Lib.DeltaV
+                   (case ww1 of wild { GHC.Types.D# x ->
+                    case ww3 of wild1 { GHC.Types.D# y ->
+                    case ww5 of wild2 { GHC.Types.D# y1 ->
+                    let {
+                      y2 :: GHC.Prim.Double# = GHC.Prim./## (GHC.Prim.+## y y1) 2.0
+                    } in
+                    case GHC.Prim./## 2.0 y of wild3 { DEFAULT ->
+                    case GHC.Prim./## 1.0 y2 of wild4 { DEFAULT ->
+                    case GHC.Prim./## x y of wild5 { DEFAULT ->
+                    case GHC.Prim./##
+                           (GHC.Prim.*##
+                              39.47841760435743
+                              (GHC.Prim.*## (GHC.Prim.*## x x) x))
+                           x of wild6 { DEFAULT ->
+                    case GHC.Prim./##
+                           (GHC.Prim.*## 6.283185307179586 y1)
+                           (GHC.Prim.sqrtDouble# wild6) of wild7 { DEFAULT ->
+                    case GHC.Prim./## 2.0 y1 of wild8 { DEFAULT ->
+                    case GHC.Prim./## 1.0 y2 of wild9 { DEFAULT ->
+                    GHC.Types.D#
+                      (GHC.Prim.+##
+                         (GHC.Prim.-##
+                            (GHC.Prim.sqrtDouble# (GHC.Prim.*## x (GHC.Prim.-## wild3 wild4)))
+                            (GHC.Prim.sqrtDouble# wild5))
+                         (GHC.Prim.-##
+                            wild7
+                            (GHC.Prim.sqrtDouble#
+                               (GHC.Prim.*##
+                                  x
+                                  (GHC.Prim.-## wild8 wild9))))) } } } } } } } } } }) } } }) -}
+4d106c7cbca9932a016f6fc8c1b55bbb
+  liftMeasure :: Lib.Measure GHC.Types.Double -> GHC.Types.Double
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U(U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Lib.Measure GHC.Types.Double ->
+                 case ds of wild { Lib.Measure x -> x }) -}
+53b59ebed24d4aeed93acfb6720c0c0f
+  orbitalPeriod ::
+    Lib.Measure Lib.GravConst
+    -> Lib.Measure Lib.Meter -> Lib.Measure Lib.Second
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U(1*U(U))><S,1*U(1*U(U))>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Lib.Measure Lib.GravConst ds1 :: Lib.Measure Lib.Meter ->
+                 case ds of wild { Lib.Measure g1 ->
+                 case ds1 of wild1 { Lib.Measure m1 ->
+                 Lib.Measure
+                   @ Lib.Second
+                   (case m1 of wild2 { GHC.Types.D# x ->
+                    case g1 of wild3 { GHC.Types.D# y ->
+                    case GHC.Prim./##
+                           (GHC.Prim.sqrtDouble#
+                              (GHC.Prim.*##
+                                 39.47841760435743
+                                 (GHC.Prim.*## (GHC.Prim.*## x x) x)))
+                           y of wild4 { DEFAULT ->
+                    GHC.Types.D# wild4 } } }) } }) -}
+a26a61d2ffd706531c0c3625e929560d
+  orbitalVelocityCirc ::
+    Lib.Measure Lib.GravConst
+    -> Lib.Measure Lib.Meter -> Lib.Measure Lib.Velocity
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U(1*U(U))><S,1*U(1*U(U))>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Lib.Measure Lib.GravConst ds1 :: Lib.Measure Lib.Meter ->
+                 case ds of wild { Lib.Measure g1 ->
+                 case ds1 of wild1 { Lib.Measure m1 ->
+                 Lib.Measure
+                   @ Lib.Velocity
+                   (case g1 of wild2 { GHC.Types.D# x ->
+                    case m1 of wild3 { GHC.Types.D# y ->
+                    case GHC.Prim./## x y of wild4 { DEFAULT ->
+                    GHC.Types.D# (GHC.Prim.sqrtDouble# wild4) } } }) } }) -}
+8ab30e899dcf043479f7981956f11e98
+  periodFromAngVelocity ::
+    Lib.Measure Lib.AngVelocity -> Lib.Measure Lib.Second
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Lib.Measure Lib.AngVelocity ->
+                 case ds of wild { Lib.Measure av1 ->
+                 Lib.Measure
+                   @ Lib.Second
+                   (case av1 of wild1 { GHC.Types.D# x ->
+                    GHC.Types.D# (GHC.Prim./## x 6.283185307179586) }) }) -}
+4fdf5d081641b57e7fafd7236fa01943
+  periodFromSemiMajorAxis ::
+    Lib.Measure Lib.GravConst
+    -> Lib.Measure Lib.Meter -> Lib.Measure Lib.Second
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U(1*U(U))><S,1*U(1*U(U))>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Lib.Measure Lib.GravConst ds1 :: Lib.Measure Lib.Meter ->
+                 case ds of wild { Lib.Measure g1 ->
+                 case ds1 of wild1 { Lib.Measure m1 ->
+                 Lib.Measure
+                   @ Lib.Second
+                   (case m1 of wild2 { GHC.Types.D# x ->
+                    case g1 of wild3 { GHC.Types.D# y ->
+                    case GHC.Prim./##
+                           (GHC.Prim.*##
+                              39.47841760435743
+                              (GHC.Prim.*## (GHC.Prim.*## x x) x))
+                           y of wild4 { DEFAULT ->
+                    GHC.Types.D# (GHC.Prim.sqrtDouble# wild4) } } }) } }) -}
+d53f85a08f6fd8bc74175871694d5c5b
+  someFunc :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Lib.someFunc1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+c88758085c1029fdd8296d39845be34a
+  someFunc1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b -> GHC.CString.unpackFoldrCString# @ b "test"#))
+                   GHC.Types.True
+                   eta) -}
+74b58b23ce9d0d0a19d7be3a1acece74
+  sqaureMeter ::
+    Lib.Measure Lib.Meter
+    -> Lib.Measure Lib.Meter -> Lib.Measure Lib.Meter2
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U(1*U(U))><S,1*U(1*U(U))>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Lib.Measure Lib.Meter ds1 :: Lib.Measure Lib.Meter ->
+                 case ds of wild { Lib.Measure m1 ->
+                 case ds1 of wild1 { Lib.Measure m2 ->
+                 Lib.Measure @ Lib.Meter2 (GHC.Float.timesDouble m1 m2) } }) -}
+c99b82b65ee7242809b705942f2c5387
+  toAngVelocity :: GHC.Types.Double -> Lib.Measure Lib.AngVelocity
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
+     Unfolding: InlineRule (0, True, True)
+                (Lib.Measure @ Lib.AngVelocity) -}
+1e9700ec11c56f30c0fbc600ac0082d1
+  toDeltaV ::
+    Lib.Measure Lib.Velocity
+    -> Lib.Measure Lib.Velocity -> Lib.Measure Lib.DeltaV
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U(1*U(U))><S,1*U(1*U(U))>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Lib.Measure Lib.Velocity
+                   ds1 :: Lib.Measure Lib.Velocity ->
+                 case ds of wild { Lib.Measure v1 ->
+                 case ds1 of wild1 { Lib.Measure v2 ->
+                 Lib.Measure @ Lib.DeltaV (GHC.Float.minusDouble v1 v2) } }) -}
+d30c1c98d70335264ba800aec89c671a
+  toGraveConst :: GHC.Types.Double -> Lib.Measure Lib.GravConst
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
+     Unfolding: InlineRule (0, True, True)
+                (Lib.Measure @ Lib.GravConst) -}
+14307dc33c160b978e589c0c2f1eadb9
+  toMeter :: GHC.Types.Double -> Lib.Measure Lib.Meter
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
+     Unfolding: InlineRule (0, True, True) (Lib.Measure @ Lib.Meter) -}
+732e1ad3022a566b6503aa65a4df7504
+  toMeter2 :: GHC.Types.Double -> Lib.Measure Lib.Meter2
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
+     Unfolding: InlineRule (0, True, True) (Lib.Measure @ Lib.Meter2) -}
+3c61858396eac6eb527db5e92a83f0dd
+  toMeter3 :: GHC.Types.Double -> Lib.Measure Lib.Meter3
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
+     Unfolding: InlineRule (0, True, True) (Lib.Measure @ Lib.Meter3) -}
+f7522366edef556275218de16285ee10
+  toSeconds :: GHC.Types.Double -> Lib.Measure Lib.Second
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
+     Unfolding: InlineRule (0, True, True) (Lib.Measure @ Lib.Second) -}
+8823cf29cb3523544a7d9eefc544e7bf
+  toVelocity :: GHC.Types.Double -> Lib.Measure Lib.Velocity
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
+     Unfolding: InlineRule (0, True, True)
+                (Lib.Measure @ Lib.Velocity) -}
+d739a4bd9cf62c4f24bfcd07e56ec63a
+  velocityFromSemiAxis ::
+    Lib.Measure Lib.Meter
+    -> Lib.Measure Lib.Meter
+    -> Lib.Measure Lib.GravConst
+    -> Lib.Measure Lib.Velocity
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S,1*U(1*U(U))><S,1*U(1*U(U))><S,1*U(1*U(U))>m,
+     Unfolding: InlineRule (3, True, False)
+                (\ ds :: Lib.Measure Lib.Meter
+                   ds1 :: Lib.Measure Lib.Meter
+                   ds2 :: Lib.Measure Lib.GravConst ->
+                 case ds of wild { Lib.Measure a1 ->
+                 case ds1 of wild1 { Lib.Measure r1 ->
+                 case ds2 of wild2 { Lib.Measure g1 ->
+                 Lib.Measure
+                   @ Lib.Velocity
+                   (case g1 of wild3 { GHC.Types.D# x ->
+                    case r1 of wild4 { GHC.Types.D# y ->
+                    case a1 of wild5 { GHC.Types.D# y1 ->
+                    case GHC.Prim./## 2.0 y of wild6 { DEFAULT ->
+                    case GHC.Prim./## 1.0 y1 of wild7 { DEFAULT ->
+                    GHC.Types.D#
+                      (GHC.Prim.sqrtDouble#
+                         (GHC.Prim.*## x (GHC.Prim.-## wild6 wild7))) } } } } }) } } }) -}
+instance GHC.Show.Show [Lib.Measure] = Lib.$fShowMeasure
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

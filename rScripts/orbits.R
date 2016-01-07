@@ -17,6 +17,8 @@ Kerbin_semi_sync = list(period = 10774.7,
 												alt = 1585.18 * pow(10,3)  + Kerbin_radius,
 												orb_vel = 1271.28)
 
+# r = meters
+# GM = gravitational constant
 ave_ang_vel <- function(GM,r){
 		# GM = w^2 * r^3
 		w = sqrt(pow(r,3) / GM)
@@ -31,6 +33,7 @@ ang_vel_from_period <- function(P){
 		(2 * pi) / P
 }
 
+# a in meters
 period_from_semi_major <- function(GM,a){
 		#p^2 = (4pi^2 * r^3) / GM
 		sqrt((4 * pow(pi,2) * pow(a,3))/ GM)
@@ -125,7 +128,7 @@ mean_anom_from_true_anom_ecc <- function(true_anom, ecc){
 		E - ( ecc * sin(E))
 }
 
-
+# Strictly an estimate...
 true_anom_from_ecc_mean_anom <- function(M,ecc){
 		M + (2 * ecc * sin(M)) + 1.25 * pow(ecc,2) * sin(2*M)
 }
@@ -148,6 +151,8 @@ delta_v_inc_change <- function(V,theta){
 }
 
 # transfer from A to B
+# r! = radios orbit of A
+
 hoff_trans_stats <- function(rA, rB, GM,mass=1){
 		trans_axis = (rA + rB)/2
 		v_iA = orbital_velocity_circ(GM,rA) # initial A
